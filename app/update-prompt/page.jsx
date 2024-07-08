@@ -58,11 +58,13 @@ const EditPrompt = () => {
     />
   )
 };
+
+
 const Page = () => {
   return (
-      <Suspense>
-          <EditPrompt />
-      </Suspense>
+    <Suspense>
+      <EditPrompt />
+    </Suspense>
   )
 }
 
