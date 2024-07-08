@@ -49,11 +49,15 @@ const Feed = () => {
       const response = await fetch('/api/prompt');
       const data = await response.json();
 
+      // log to delete
+      console.log(data);
+  
       setPosts(data);
     };
 
     fetchPosts();
   },[]);
+  
   return (
     <section className="feed">
       <form className="relative w-full flex-center">
