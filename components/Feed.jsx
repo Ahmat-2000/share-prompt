@@ -23,8 +23,8 @@ const Feed = () => {
   const [posts, setPosts] = useState([]);
 
   //TODO 
-  const [searchedResults, setSearchedResults] = useState([]);
-  const [searchTimeout, setSearchTimeout] = useState(null);
+  // const [searchedResults, setSearchedResults] = useState([]);
+  // const [searchTimeout, setSearchTimeout] = useState(null);
 
   const filterPrompts = (searchtext) => {
    /*  const regex = new RegExp(searchtext, "i"); // case-insensitive
@@ -36,12 +36,12 @@ const Feed = () => {
     ) */
   };
   const handleSearchChange = (e) => {
-    clearTimeout(searchTimeout);
-    setSearchText(e.target.value);
-    setSearchTimeout(setTimeout(() => {
-      const searchResult = filterPrompts(e.target.value);
-      setSearchedResults(searchResult);
-    }, 500));
+    // clearTimeout(searchTimeout);
+    // setSearchText(e.target.value);
+    // setSearchTimeout(setTimeout(() => {
+    //   const searchResult = filterPrompts(e.target.value);
+    //   setSearchedResults(searchResult);
+    // }, 500));
   };
 
   useEffect(() => {
