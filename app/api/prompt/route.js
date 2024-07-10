@@ -1,6 +1,7 @@
 import {connectToDB} from '@utils/database';
 import Prompt from '@models/prompt';
 
+/** Add this to help nextJs to not cache this route */
 export const dynamic = 'force-dynamic';
 
 export const GET = async (request) => {
