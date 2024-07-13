@@ -19,7 +19,7 @@ const Home = () => {
       </p>
 
       {/** feed components */}
-      <Suspense /* fallback={<Loading />} */>
+      <Suspense fallback={<Loading />}>
         <Feed />
       </Suspense>
     </section>
