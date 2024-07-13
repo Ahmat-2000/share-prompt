@@ -56,7 +56,7 @@ const Feed = () => {
       setPosts(data);
     };
 
-    fetchPosts();
+    setTimeout(() => fetchPosts() , 5000 );
   },[]);
   
   return (
@@ -71,7 +71,7 @@ const Feed = () => {
           required
         />
       </form>
-      
+
       <Suspense fallback={<Loading />}>
         <PromptCardList 
           data={posts}
