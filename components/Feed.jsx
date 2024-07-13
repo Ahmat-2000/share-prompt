@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 
 import PromptCard from "./PromptCard";
 import Loading from "@app/loading";
