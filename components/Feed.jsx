@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 
 import PromptCard from "./PromptCard";
+import Loading from "@app/loading";
 
 const PromptCardList = ({ data, handleTagClick }) => {
   return (
@@ -70,11 +71,15 @@ const Feed = () => {
           required
         />
       </form>
+      
+      <Suspense fallback={<Loading />}>
+        <PromptCardList 
+          data={posts}
+          handleTagClic
+          k={() => {}}
+        />
+      </Suspense>
 
-      <PromptCardList 
-        data={posts}
-        handleTagClick={() => {}}
-      />
     </section>
   );
 };

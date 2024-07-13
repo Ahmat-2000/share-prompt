@@ -62,7 +62,7 @@ const EditPrompt = () => {
 
 const Page = () => {
   return (
-    <Suspense fallback={<p>Loading prompt...</p>}>
+    <Suspense fallback={<Loading />}>
       <EditPrompt />
     </Suspense>
   )
