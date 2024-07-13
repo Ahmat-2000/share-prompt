@@ -1,7 +1,4 @@
-
-import { Suspense } from "react";
-import Feed from "@components/Feed";
-import Loading from "./loading";
+import Feed from "@components/Feed"
 
 const Home = () => {
   return (
@@ -20,9 +17,7 @@ const Home = () => {
       </p>
 
       {/** feed components */}
-      <Suspense fallback={<Loading />}>
-        <Feed />
-      </Suspense>
+      <Feed />
     </section>
   )
 }

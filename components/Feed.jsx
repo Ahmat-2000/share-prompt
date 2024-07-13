@@ -1,9 +1,8 @@
 'use client';
 
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect } from "react";
 
 import PromptCard from "./PromptCard";
-import Loading from "@app/loading";
 
 const PromptCardList = ({ data, handleTagClick }) => {
   return (
@@ -49,10 +48,14 @@ const Feed = () => {
     const fetchPosts = async () => {
       const response = await fetch('/api/prompt');
       const data = await response.json();
+
+      // log to delete
+      console.log(data);
+  
       setPosts(data);
     };
 
-    setTimeout(() => fetchPosts() , 5000 );
+    fetchPosts();
   },[]);
   
   return (
@@ -67,15 +70,10 @@ const Feed = () => {
           required
         />
       </form>
-
-      <Suspense fallback={<Loading />}>
-        <PromptCardList 
-          data={posts}
-          handleTagClic
-          k={() => {}}
-        />
-      </Suspense>
-
+      <PromptCardList 
+        data={posts}
+        handleTagClick={() => {}}
+      />
     </section>
   );
 };
