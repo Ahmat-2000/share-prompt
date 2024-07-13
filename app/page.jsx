@@ -1,6 +1,7 @@
 
 import { Suspense } from "react";
 import Feed from "@components/Feed";
+import Loading from "./loading";
 
 const Home = () => {
   return (
